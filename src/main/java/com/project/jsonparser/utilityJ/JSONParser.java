@@ -1,7 +1,7 @@
 package com.project.jsonparser.utilityJ;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -27,7 +27,7 @@ public class JSONParser {
     }
 
     private Map<String, Object> parseObject() throws Exception {
-        Map<String, Object> map = new HashMap<>();
+    	Map<String, Object> map = new LinkedHashMap<>();
         index++; // Skip '{'
 
         while (index < json.length()) {
